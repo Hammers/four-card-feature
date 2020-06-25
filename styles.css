@@ -1,0 +1,77 @@
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%);
+}
+
+h1 {
+    font-weight: 200;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 15px;
+    color: hsl(229, 6%, 66%)
+}
+
+.main-text {
+    width: 500px;
+    margin: 40px auto;
+}
+
+.cards {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template: ". card2 ."  "card1 card2 card4" "card1 card3 card4" ". card3 ." / 1fr 1fr 1fr;
+}
+
+.card {
+    text-align: start;
+    padding: 30px;
+    -webkit-box-shadow: 3px 3px 5px 6px hsl(0, 0%, 98%);
+    -moz-box-shadow:    3px 3px 5px 6px hsl(0, 0%, 98%);
+    box-shadow:         3px 3px 5px 6px hsl(0, 0%, 98%);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.card > p {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.card-image {
+    text-align: right;
+}
+
+.card-1 {
+    border-top: 4px solid hsl(180, 62%, 55%);
+    grid-area: card1;
+}
+
+.card-2 {
+    border-top: 4px solid hsl(0, 78%, 62%);
+    grid-area: card2;
+}
+
+.card-3 {
+    border-top: 4px solid hsl(34, 97%, 64%);
+    grid-area: card3;
+}
+
+.card-4 {
+    border-top: 4px solid hsl(212, 86%, 64%);
+    grid-area: card4;
+}
+
+@media(max-width: 768px) {
+    .cards {
+        width: 80%;
+        grid-template: "card1" "card2" "card3" "card4";
+    }
+}
